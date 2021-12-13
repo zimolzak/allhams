@@ -10,7 +10,7 @@ EN.dat: l_amat.zip
 	touch EN.dat
 
 ENshort.dat: EN.dat
-	head -n 10000 $< > $@
+	head -n 100000 $< > $@
 
 out.txt: allhams.R ENshort.dat
 	Rscript $< > $@
