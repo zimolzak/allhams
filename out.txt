@@ -1,0 +1,151 @@
+[1] 1528034      30
+  tablename    num V3 V4 callsign code      lnum            fullname firstname
+1        EN 215000 NA NA     AA0A    L L00209566 MC CARTHY, DENNIS J    DENNIS
+2        EN 215001 NA NA    AA0AA    L L00196154    MONKS, WILLIAM S   WILLIAM
+3        EN 215002 NA NA    AA0AB    L L00185374  CROM SR, RAYMOND L   RAYMOND
+4        EN 215003 NA NA    AA0AC    L                PETH, ESTHER T    ESTHER
+5        EN 215004 NA NA    AA0AD    L L00310459   Odermann, William   William
+6        EN 215005 NA NA    AA0AE    L L00180173    REEVES, ARTHUR L    ARTHUR
+  middlename  lastname suffix V13 V14 V15                   address
+1          J MC CARTHY         NA  NA  NA           6438 Bishops Pl
+2          S     MONKS         NA  NA  NA W 529 Nebraska Hall, UN-L
+3          L      CROM     SR  NA  NA  NA         12291 BRIGHTON RD
+4          T      PETH         NA  NA  NA       BENEDICTINE CONVENT
+5             Odermann         NA  NA  NA        2903 8th Avenue SW
+6          L    REEVES         NA  NA  NA          5514 SAVANNAH RD
+          city state       zip weird_addr_text                   misctext
+1  SAINT LOUIS    MO 631093371                                           
+2      Lincoln    NE 685880514                 c/o Scott L. Gardner, HWML
+3    HENDERSON    CO     80640              33                           
+4        CLYDE    MO     64432                                           
+5       Austin    MN     55912                                           
+6 SAINT JOSEPH    MO     64505                                           
+  zeronum othernum othercode V25 V26 V27 V28 V29 V30
+1     000  2274249         I  NA  NA  NA  NA  NA  NA
+2     000  2268431         I  NA  NA  NA  NA  NA  NA
+3     000  2144756         I  NA  NA  NA  NA  NA  NA
+4     000       NA         I  NA  NA  NA  NA  NA  NA
+5     000  4694238         I  NA  NA  NA  NA  NA  NA
+6     000  2296275         I  NA  NA  NA  NA  NA  NA
+
+
+
+
+----
+
+
+
+Column 1 (tablename):
+     EN    <NA> 
+1528034       0 
+
+Column 3 (V3):
+   <NA> 
+1528034 
+
+Column 4 (V4):
+   <NA> 
+1528034 
+
+Column 6 (code):
+      L    <NA> 
+1528034       0 
+
+Column 10 (middlename):
+                   -      ,      "      )      ]      /      5      a      A 
+196372      3     12      1      1      1      1      2      2     34 145767 
+     b      B      c      C      d      D      e      E      f      F      g 
+    17  42786     34  73037     32  88603     21 100666      7  37925      9 
+     G      h      H      i      I      j      J      k      K      l      L 
+ 44396      3  43742      2   7516     52 129370     16  31872     44 126208 
+     m      M      n      N      o      O      p      P      Q      r      R 
+    39 104820      7  17684      6   9689     16  42382    938     27  97449 
+     s      S      t      T      u      U      v      V      w      W      X 
+    13  56548     20  36334      1    641      5  12290     25  76606    419 
+     Y      Z   <NA> 
+  2330   1191      0 
+
+Column 13 (V13):
+   <NA> 
+1528034 
+
+Column 14 (V14):
+   <NA> 
+1528034 
+
+Column 15 (V15):
+   <NA> 
+1528034 
+
+Column 18 (state):
+           AA     AE     AK     al     AL     AP     AR     AS     az     AZ 
+ 21583     45    361   7061      1  23920    353  16145    143     51  40561 
+    ca     Ca     CA     co     Co     CO     CT     DC     DE     fl     Fl 
+     6      2 218493     14      8  34013  15492   1009   3455      8      9 
+    FL     ga     GA     GU     HI     IA     id     ID     il     Il     IL 
+ 91391      2  35740   1051   8400  12801      8  16309      6      1  40814 
+    IN     KS     KY     LA     MA     MD     ME     Mi     MI     MN     mo 
+ 30253  14725  18593  13289  27640  21909   9215      4  41515  21988      3 
+    MO     MP     MS     MT     NC     ND     NE     NH     nj     Nj     NJ 
+ 29289    916  10709   7782  41997   3050   7420  10603      1      1  28100 
+    NM     nv     NV     ny     NY     oh     OH     ok     OK     or     Or 
+ 12978      7  14811      4  56625      1  55030      1  20426      6      1 
+    OR     pa     Pa     PA     PR     RI     sc     SC     SD     Tn     TN 
+ 37605      3      5  47420  12691   4242      2  18578   3674      2  35218 
+    tx     Tx     TX     UM     ut     Ut     UT     va     VA     VI     VT 
+    10      1 105200      4     20      1  29620      1  38475    657   4211 
+    wa     WA     wi     WI     wv     WV     WY   <NA> 
+     2  64306      1  21524      2  12451   3960      0 
+
+Column 22 (zeronum):
+                      0     000     001     002     003     010     021     023 
+   6461       4       2 1521324      40       4       1       1       1       1 
+    032     033     064     088     100     101     105     106     107     111 
+      1       2       5       3       1       2       1       1       1       8 
+    123     217     233     266     272     285     295     300     305     308 
+     12       1       1       1       2       1       2       2       1       2 
+    333     385     389     3de     420     454     509      51     510     545 
+      1       1       1       2       3       2       1       1       3       2 
+    559     579     599     654     666     706     807     810     821     911 
+      1       1       4      11       1       1       3       1       1       1 
+    950     966     999     AA1     aaa     AAA     AAB     abc     acr     ak1 
+      2       6       3       2       2       4       2       1       1       2 
+    AMA     BCC     BPD     CAT     cbr     COR     crw     CUF     CVF     fcc 
+      1       1       1       2       1       1       2       2       1       1 
+    FCC      ha      HA     Ham     HAM     hav     HAV     HON     htp      IB 
+      1       1       5       1       2       1       1       1       1       1 
+    KD6     kna     lic     m&o     mhs     n/a     N/A     n7o     NDX     non 
+      1       1       2       1       2       2       3       1       2       5 
+    ntl     oem     OEM     pci     ppf     pw1     RCC     rwk     sar     SAR 
+      1       2       2       1       3       2       4       1       1       2 
+    SDP     shr     TAR     tri     TRI     w3z     WAR     Yal    <NA> 
+      2       1       1       1       1       1       3       1       0 
+
+Column 24 (othercode):
+              B       G       I       M       R    <NA> 
+   4609   28418      40 1494617     118     232       0 
+
+Column 25 (V25):
+   <NA> 
+1528034 
+
+Column 26 (V26):
+   <NA> 
+1528034 
+
+Column 27 (V27):
+   <NA> 
+1528034 
+
+Column 28 (V28):
+   <NA> 
+1528034 
+
+Column 29 (V29):
+   <NA> 
+1528034 
+
+Column 30 (V30):
+   <NA> 
+1528034 
+
