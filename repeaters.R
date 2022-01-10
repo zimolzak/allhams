@@ -78,3 +78,7 @@ ggplot(nearby) +
 	geom_jitter(alpha = 0.5) +
 	geom_vline(xintercept = MYLON) +
 	geom_hline(yintercept = MYLAT)
+
+ggplot(compare %>% filter(dist.nm < 100, Use == "OPEN")) +
+	aes(x = dist.nm, color = band) +
+	geom_density()
