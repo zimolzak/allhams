@@ -11,7 +11,7 @@ head(Y)
 
 Y %>% filter(`Output Freq` < 200 & `Input Freq` < 200) -> vhf  # remove cross-band
 qplot(vhf$`Output Freq`)
-ggplot(vhf) + aes(`Input Freq`, `Output Freq`) +
+ggplot(vhf) + aes(`Output Freq`, `Input Freq`) +
 	geom_jitter(alpha = 0.1) +
 	geom_abline(intercept = 0, slope = 1) +
 	scale_x_continuous(minor_breaks=seq(144, 148, 0.2)) +
@@ -19,7 +19,7 @@ ggplot(vhf) + aes(`Input Freq`, `Output Freq`) +
 
 Z %>% filter(`Output Freq` > 400 & `Input Freq` > 400) -> uhf
 qplot(uhf$`Output Freq`)
-ggplot(uhf) + aes(`Input Freq`, `Output Freq`) +
+ggplot(uhf) + aes(`Output Freq`, `Input Freq`) +
 	geom_jitter(alpha = 0.1) +
 	geom_abline(intercept = 0, slope = 1) +
 	scale_x_continuous(breaks=seq(435, 450, 5)) +
