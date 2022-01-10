@@ -7,6 +7,9 @@ library(lubridate)
 message("Reading csv")
 Y = fread(here('texas-2m-repeaters-2022-01-10.csv'))
 Z = fread(here('texas-70cm-repeaters-2022-01-10.csv'))
+L = fread(here('my_lat_long.csv'))  # just 1 line like 31.234,-90.123
+MYLAT = L$V1
+MYLON = L$V2
 
 Y %>%
 filter(`Output Freq` < 200 & `Input Freq` < 200) %>%
@@ -20,11 +23,17 @@ bind_rows(vhf, uhf, .id = "table.id") %>%
 mutate(up.tone.num = as.numeric(`Uplink Tone`),
 	down.tone.num = as.numeric(`Downlink Tone`),
 	band = case_when(table.id == 1 ~ '2m', table.id == 2 ~ '70cm'),
-	update.dt = as_date(`Last Update`)
+	update.dt = as_date(`Last Update`),
+	dist.nm = sqrt((`Lat` - MYLAT)^2 + (`Long` - MYLON)^2) * 60
 ) %>%
 filter(Long < 0 & Lat < 40) -> compare
 
-head(compare)
+compare %>%
+filter(dist.nm < 15, Use == "OPEN") -> nearby
+
+dim(nearby)
+
+nearby %>% arrange(dist.nm) %>% select(Call, `Output Freq`, dist.nm, Location)
 
 
 
@@ -64,6 +73,8 @@ ggplot(compare) +
 	aes(x = update.dt, fill = band) +
 	geom_histogram()
 
-L = fread(here('my_lat_long.csv'))  # just 1 line like 31.234,-90.123
-LAT = L$V1
-LON = L$V2
+ggplot(nearby) +
+	aes(x = Long, y = Lat, color = band) +
+	geom_jitter(alpha = 0.5) +
+	geom_vline(xintercept = MYLON) +
+	geom_hline(yintercept = MYLAT)
