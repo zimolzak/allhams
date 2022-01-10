@@ -28,6 +28,11 @@ mutate(up.tone.num = as.numeric(`Uplink Tone`),
 ) %>%
 filter(Long < 0 & Lat < 40) -> compare
 
+
+
+
+###### text report
+
 compare %>%
 filter(dist.nm < 15, Use == "OPEN") -> nearby
 
