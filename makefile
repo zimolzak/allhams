@@ -1,4 +1,4 @@
-all: out.txt
+all: out.txt repeaters_out.txt
 
 .PHONY: all clean deepclean
 
@@ -13,6 +13,9 @@ ENshort.dat: EN.dat
 	head -n 100000 $< > $@
 
 out.txt: allhams.R ENshort.dat
+	Rscript $< > $@
+
+repeaters_out.txt: repeaters.R
 	Rscript $< > $@
 
 clean:

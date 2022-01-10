@@ -22,7 +22,3 @@ for(i in c(1,3,4,6,10,13,14,15,18,22,24:30)){
 	print(table(renamed[, ..i], useNA = "always"))
 	cat("\n")
 }
-
-message("Reading csv")
-Y = fread(here('texas-2m-repeaters-2022-01-10.csv'))
-head(Y)
