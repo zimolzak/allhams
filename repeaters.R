@@ -21,3 +21,17 @@ qplot(uhf$`Input Freq`, uhf$`Output Freq`) +
 	geom_abline(intercept = 0, slope = 1) +
 	scale_x_continuous(breaks=seq(435, 450, 5)) +
 	scale_y_continuous(breaks=seq(435, 450, 5))
+
+vhf %>% select(`Uplink Tone`, `Downlink Tone`, Lat, Long, `Last Update`, `Output Freq`) -> vcompare
+uhf %>% select(`Uplink Tone`, `Downlink Tone`, Lat, Long, `Last Update`, `Output Freq`) -> ucompare
+bind_rows(vcompare, ucompare, .id = "table.id") %>%
+	mutate(up.tone.num = as.numeric(`Uplink Tone`),
+		down.tone.num = as.numeric(`Downlink Tone`),
+		band = case_when(table.id == 1 ~ '2m', table.id == 2 ~ '70cm')
+	) -> compare
+
+head(compare)
+
+ggplot(compare) +
+	aes(x = up.tone.num, y = down.tone.num, color = band) +
+	geom_jitter()
