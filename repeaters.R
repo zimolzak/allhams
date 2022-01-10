@@ -23,7 +23,8 @@ ggplot(uhf) + aes(`Input Freq`, `Output Freq`) +
 	geom_jitter(alpha = 0.1) +
 	geom_abline(intercept = 0, slope = 1) +
 	scale_x_continuous(breaks=seq(435, 450, 5)) +
-	scale_y_continuous(breaks=seq(435, 450, 5))
+	scale_y_continuous(breaks=seq(435, 450, 5)) +
+	geom_density_2d()
 
 vhf %>% select(`Uplink Tone`, `Downlink Tone`, Lat, Long, `Last Update`, `Output Freq`) -> vcompare
 uhf %>% select(`Uplink Tone`, `Downlink Tone`, Lat, Long, `Last Update`, `Output Freq`) -> ucompare
