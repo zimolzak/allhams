@@ -8,3 +8,6 @@ counts
 texas-2m-repeaters-2022-01-10.csv
 texas-70cm-repeaters-2022-01-10.csv
 my_lat_long.csv
+.Rproj.user
+*.RData
+.Rapp.history

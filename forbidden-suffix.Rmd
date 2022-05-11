@@ -1,0 +1,29 @@
+---
+title: "Analyze ham radio callsign suffixes"
+author: "Andrew Zimolzak"
+date: '2022-05-11'
+output: pdf_document
+---
+
+```{r libraries, message=FALSE, warning=FALSE}
+library(here)
+library(dplyr)
+library(data.table)
+```
+
+```{r reading}
+# message("Reading dat (~8 sec...)")
+X = fread(here('EN.dat'), header = FALSE, sep="|", quote="")
+# ENshort.dat
+dim(X)
+```
+
+```{r rename}
+X %>%
+  rename(
+    tablename = V1, num = V2, callsign = V5, code = V6, lnum = V7, fullname = V8,
+    firstname = V9, middlename = V10, lastname = V11, suffix = V12, address = V16,
+    city = V17, state = V18, zip = V19, weird_addr_text = V20, misctext = V21,
+    zeronum = V22, othernum = V23, othercode = V24) -> renamed
+```
+
