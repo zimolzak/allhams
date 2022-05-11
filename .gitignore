@@ -11,3 +11,5 @@ my_lat_long.csv
 .Rproj.user
 *.RData
 .Rapp.history
+.RDataTmp
+.Rhistory
