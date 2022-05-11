@@ -63,6 +63,11 @@ dim(presuf)[1] / (26 ^ 3)
 The above shows: How many hams have a 3-char suffix, what proportion of hams
 have a 3-char suffix, and how many hams per suffix (mean).
 
+```{r onevar}
+hams_per_suff <- dim(presuf)[1] / (26 ^ 3)
+```
+
+
 
 # Count unique suffixes
 
@@ -94,7 +99,9 @@ counts %>%
 # Uncommon suffixes
 
 ```{r expand}
-counts %>% expand(s1, s2, s3) -> expanded
+counts %>%
+  filter(s3 != '0') %>%
+  expand(s1, s2, s3) -> expanded
 
 left_join(expanded, counts, by=c('s1', 's2', 's3')) -> counts_all
 
@@ -107,7 +114,7 @@ Compare dimension of `expanded` and `counts_all` with the expected $26^3$.
 Expect to see 17,576 show up in all of those. **Funny thing:** Now I am
 seeing 18,252 in the `expanded` data frame. Why? That equals
 $26 \cdot 26 \cdot 27$. Must be extra weird character in `s1` or `s2` or
-`s3`.
+`s3`. Added `filter() %>%` so now probably **fixed.**
 
 
 ## Table of never-used suffixes
@@ -124,6 +131,9 @@ Expect the above two to be equal. But again, weird. I am seeing 765
 versus 89. It so happens that $765 - 89 = 26^3$. Seems like `s3` is
 sometimes equal to the string "0".
 
+**Final weird thing:** Why am I seeing 90 in `forbidden` versus 89 missing
+from `counts`, even after filtering out the zero versus letter O thing?
+
 ## Diagnostic
 
 ```{r diagnostic}
@@ -132,3 +142,74 @@ counts %>% filter(s3 == 0) %>% kable()
 
 I even wonder if this is a typo in the database of "zero" replacing
 "capital letter O, as in Oscar."
+
+
+
+
+# Final tables
+
+Lots of suffixes starting in "Q" are banned. But *only three others*
+are banned.
+
+```{r non-q}
+forbidden %>% filter(s1 != 'Q') %>% kable()
+```
+
+So, somewhat surprisingly to me, all of the following exist at least once:
+ASS, POO, FUK.
+
+```{r sketchy-suffixes}
+counts %>%
+  filter(
+    suffix == 'ASS' | suffix == 'POO' | suffix == 'KKK' | suffix == 'FUK' |
+      suffix == 'TIT' | suffix == 'GOD' | suffix == 'FCC' | suffix == 'XXX' |
+      suffix == 'SEX' | suffix == 'PEE' | suffix == 'KOK' | suffix == 'NSA' |
+      suffix == 'DIK' | suffix == 'DIC' | suffix == 'CIA' | suffix == 'ZZZ' |
+      suffix == 'ZYX' | suffix == 'USA' | suffix == 'WTF'
+  ) %>%
+  arrange(desc(count)) %>%
+  mutate(obs_over_exp = count / hams_per_suff) %>%
+  kable()
+```
+
+"POO" is one of the few mildly rude ones that is actually *more* popular than
+expected. Yikes at the substring with 68 callsigns containing it.
+
+
+```{r q-with-rstu}
+forbidden %>%
+  filter(s1 == 'Q') %>%
+  group_by(s1, s2) %>%
+  summarise(sum_q = n()) %>%
+  kable()
+```
+
+You can't have any suffix starting with "QR," "QS," or "QT." Plus a few starting with "QU."
+
+```{r qu}
+forbidden %>%
+  filter(s1 == 'Q' & s2 == 'U') %>%
+  kable()
+```
+
+## Diagnostic
+
+```{r count-89-90}
+
+forbidden %>% mutate(suf_join = paste(s1, s2, s3, sep='')) -> forbidden_joinable
+
+left_join(
+  forbidden_joinable,
+  counts,
+  by = c('suf_join' = 'suffix'),
+  suffix = c('_for', '_cou')
+) %>%
+  select(suf_join, suffix, count_for, count_cou)
+```
+
+```{r math}
+forb_n <- 3  + 26*3 + 9
+forb_n
+26^3 - forb_n
+dim(counts)
+```
