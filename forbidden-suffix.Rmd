@@ -5,18 +5,19 @@ date: '2022-05-11'
 output: pdf_document
 ---
 
-What, if any, 3-letter ham radio callsign suffixes do not exist anywhere in FCC's
-database (presumably because they are banned)? Short answer: FUC, PIS, and SOS.
-And a few other boring ones. *All* other suffixes are seemingly allowed.
+What, if any, 3-letter ham radio callsign suffixes do not exist
+anywhere in FCC's database (presumably because they are banned)? Short
+answer: FUC, PIS, and SOS. And a few other boring ones. *All* other
+suffixes are seemingly allowed.
 
 # Introduction
 
-Ham radio operators can choose a "vanity" callsign. A usual callsign format
-is "K5ABC". The "suffix" is the part of the callsign after the number. Often
-the suffix is 3 letters long. This is enough letters to make some mildly to
-very offensive letter combinations. So, which 3-letter combos are problematic
-enough that they never appear? Data can be downloaded from FCC in a file
-called `l_amat.zip`.
+Ham radio operators can choose a "vanity" callsign. A usual callsign
+format is "K5ABC". The "suffix" is the part of the callsign after the
+number. Often the suffix is 3 letters long. This is enough letters to
+make some mildly to very offensive letter combinations. So, which
+3-letter combos are problematic enough that they never appear? Data
+can be downloaded from FCC in a file called `l_amat.zip`.
 
 
 
@@ -78,8 +79,8 @@ hams_per_suff <- dim(presuf)[1] / (26 ^ 3)
 hams_per_suff
 ```
 
-The above shows: How many hams have a 3-char suffix, what proportion of hams
-have a 3-char suffix, and how many hams per suffix (mean).
+The above shows: How many hams have a 3-char suffix, what proportion
+of hams have a 3-char suffix, and how many hams per suffix (mean).
 
 
 
@@ -97,8 +98,8 @@ presuf %>%
 26 ^ 3 - dim(counts)[1]
 ```
 
-The above shows how many suffixes are *missing,* or not attested, out of the
-expected $26^3 = 17576$.
+The above shows how many suffixes are *missing,* or not attested, out
+of the expected $26^3 = 17576$.
 
 ## Side analysis: most common suffixes
 
@@ -126,11 +127,11 @@ dim(counts_all)
 26^3
 ```
 
-Compare dimension of `expanded` and `counts_all` with the expected $26^3$.
-Expect to see 17,576 show up in all of those. **Funny thing:** I initially
-saw 18,252 in the `expanded` data frame. Why? That equals
-$26 \cdot 26 \cdot 27$. Must be extra weird character in `s1` or `s2` or
-`s3`. Added `filter() %>%` so now probably **fixed.**
+Compare dimension of `expanded` and `counts_all` with the expected
+$26^3$. Expect to see 17,576 show up in all of those. **Funny thing:**
+I initially saw 18,252 in the `expanded` data frame. Why? That equals
+$26 \cdot 26 \cdot 27$. Must be extra weird character in `s1` or `s2`
+or `s3`. Added `filter() %>%` so now probably **fixed.**
 
 ```{r filter-na}
 counts_all %>%
@@ -140,14 +141,15 @@ dim(forbidden)[1]
 26 ^ 3 - dim(counts)[1]
 ```
 
-The above show the counts of never-seen suffixes.
-Expect the above two to be equal. But again, weird. I first saw 765
-versus 89. It so happens that $765 - 89 = 26^3$. Seems like `s3` is
-sometimes equal to the string "0".
+The above show the counts of never-seen suffixes. Expect the above two
+to be equal. But again, weird. I first saw 765 versus 89. It so
+happens that $765 - 89 = 26^3$. Seems like `s3` is sometimes equal to
+the string "0".
 
-Final weird thing: Then I was seeing 90 in `forbidden` versus 89 missing
-from `counts`, even after filtering out the zero versus letter O thing?
-Filtered it earlier in the workflow instead, and now it matches.
+Final weird thing: Then I was seeing 90 in `forbidden` versus 89
+missing from `counts`, even after filtering out the zero versus letter
+O thing? Filtered it earlier in the workflow instead, and now it
+matches.
 
 ## Diagnostic
 
@@ -163,16 +165,16 @@ I even wonder if this is a typo in the database of "zero" replacing
 
 # Final tables
 
-Lots of suffixes starting in "Q" are banned. But *only three others*
+Lots of suffixes starting with "Q" are banned. But *only three others*
 are banned. Here they are.
 
 ```{r non-q}
 forbidden %>% filter(s1 != 'Q') %>% kable()
 ```
 
-So, somewhat surprisingly to me, all of the following are *not* banned and
-exist at least once: ASS, POO, FUK. Here's a table of sketchy suffixes, with
-some very common ones thrown in for comparison.
+So, somewhat surprisingly to me, all of the following are *not* banned
+and exist at least once: ASS, POO, FUK. Here's a table of sketchy
+suffixes, with some very common ones thrown in for comparison.
 
 ```{r sketchy-suffixes}
 counts %>%
@@ -188,9 +190,12 @@ counts %>%
   kable()
 ```
 
-"POO" is one of the few mildly rude ones that is actually *more* popular than
-expected. Yikes at the substring with 68 callsigns containing it.
+"POO" is one of the few mildly rude ones that is actually *more*
+popular than expected. Yikes at the substring with 68 callsigns
+containing it.
 
+
+## Boring Q suffixes
 
 ```{r q-with-rstu}
 forbidden %>%
@@ -200,7 +205,8 @@ forbidden %>%
   kable()
 ```
 
-Those numbers mean you can't have *any* suffix starting with "QR," "QS," or "QT." Plus a few starting with "QU."
+Those numbers mean you can't have *any* suffix starting with "QR,"
+"QS," or "QT." Plus a few starting with "QU."
 
 ```{r qu}
 forbidden %>%
