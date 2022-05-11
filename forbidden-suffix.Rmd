@@ -32,7 +32,7 @@ library(knitr)  # kable
 
 # Input data and show size
 
-```{r reading}
+```{r reading-10sec}
 # message("Reading dat (~8 sec...)")
 d_1528k = fread(here('EN.dat'), header = FALSE, sep="|", quote="")
 d_100k = fread(here('ENshort.dat'), header = FALSE, sep="|", quote="")
@@ -59,7 +59,7 @@ X %>%
 
 # String processing of suffixes
 
-```{r suffix-wait}
+```{r split-suffix-40sec}
 renamed %>%
   select(callsign) %>%
   separate(
@@ -100,6 +100,7 @@ presuf %>%
 
 The above shows how many suffixes are *missing,* or not attested, out
 of the expected $26^3 = 17576$.
+
 
 ## Side analysis: most common suffixes
 
@@ -150,6 +151,7 @@ Final weird thing: Then I was seeing 90 in `forbidden` versus 89
 missing from `counts`, even after filtering out the zero versus letter
 O thing? Filtered it earlier in the workflow instead, and now it
 matches.
+
 
 ## Diagnostic
 
@@ -213,6 +215,7 @@ forbidden %>%
   filter(s1 == 'Q' & s2 == 'U') %>%
   kable()
 ```
+
 
 ## Diagnostic
 

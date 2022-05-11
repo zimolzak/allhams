@@ -1,4 +1,4 @@
-endpoints = out.txt repeaters_out.txt
+endpoints = out.txt repeaters_out.txt forbidden-suffix.pdf
 incidentals = Rplots.pdf
 intermediates = ENshort.dat
 
@@ -31,7 +31,8 @@ out.txt: allhams.R ENshort.dat
 repeaters_out.txt: repeaters.R $(rptcsvs)
 	Rscript $< > $@  # creates Rplots.pdf too
 
-# Rscript -e "rmarkdown::render('deleteme.Rmd')"
+%.pdf: %.Rmd
+	Rscript -e "rmarkdown::render('$<')"
 
 #### clean
 
