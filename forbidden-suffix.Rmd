@@ -28,6 +28,7 @@ library(dplyr)
 library(data.table)
 library(tidyr)
 library(knitr)  # kable
+library(ggplot2)
 ```
 
 # Input data and show size
@@ -225,3 +226,45 @@ forb_n
 26^3 - forb_n
 dim(counts)
 ```
+
+
+
+
+# Explore distribution of suffixes in general
+
+```{r}
+qplot(counts$count) + geom_vline(xintercept = hams_per_suff)
+```
+
+Interesting that it's bimodal. There's the "nearly random" component in the middle, centered around `r hams_per_suff`. But then there are some that have nonzero but very low counts. Suffixes that used to be banned but are not any more, perhaps?
+
+
+## Low counts but not total ban
+
+By inspection, a lot start with "X" for some reason. And also "QU."
+
+```{r}
+counts %>%
+  filter(count <= 57 & s1 != 'X') %>%
+  filter(! (s1 == 'Q' & s2 == 'U')) %>%
+  arrange(desc(count)) %>%
+  select(suffix, count) %>%
+  kable()
+```
+
+This definitely reveals some likely banned or discouraged suffixes that I didn't think of.
+
+## Zoom in on histogram
+
+```{r zoom-in}
+qplot(counts$count) +
+  geom_vline(xintercept = hams_per_suff) +
+  xlim(50, hams_per_suff)
+```
+
+I think I should change the cutoff to around 62. *Update:* tried that, and the only
+interesting one in that range was "GOD," weighing in at a count of 60. So I changed
+the threshold once again to $\le 57$. That gives the 38 rarest suffixes.
+
+Definitely includes some slurs. But also double-meaning words (nut, pig, gas, box,
+sob). Most amusing one is "LID."
