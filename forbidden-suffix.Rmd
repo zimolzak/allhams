@@ -10,14 +10,23 @@ library(here)
 library(dplyr)
 library(data.table)
 library(tidyr)
+library(knitr)  # kable
 ```
+
+# Input data and show size
 
 ```{r reading}
 # message("Reading dat (~8 sec...)")
-X = fread(here('EN.dat'), header = FALSE, sep="|", quote="")
-# ENshort.dat
+d_1528k = fread(here('EN.dat'), header = FALSE, sep="|", quote="")
+d_100k = fread(here('ENshort.dat'), header = FALSE, sep="|", quote="")
+```
+
+
+```{r manual-set-data-size}
+X = d_100k
 dim(X)
 ```
+
 
 ```{r rename}
 X %>%
@@ -28,11 +37,79 @@ X %>%
     zeronum = V22, othernum = V23, othercode = V24) -> renamed
 ```
 
+# String processing of suffixes
+
 ```{r suffix}
 renamed %>%
   select(callsign) %>%
   separate(
     callsign, sep='[0-9]', into=c('prefix', 'suffix'), extra='merge'
+  ) %>%
+  mutate(len_suf = nchar(suffix)) %>%
+  filter(len_suf >= 3) %>%
+  mutate(
+    s1 = substr(suffix, 1, 1),
+    s2 = substr(suffix, 2, 2),
+    s3 = substr(suffix, 3, 3)
   ) -> presuf
+
+dim(presuf)
+dim(presuf)[1] / dim(renamed)[1]
+dim(presuf)[1] / (26 ^ 3)
 ```
 
+The above shows: How many hams have a 3-char suffix, what proportion of hams
+have a 3-char suffix, and how many hams per suffix (mean).
+
+# Count unique suffixes
+
+```{r distribution}
+presuf %>%
+  arrange(suffix) %>%
+  group_by(suffix, s1, s2, s3) %>%
+  summarise(count = n()) %>%
+  ungroup() -> counts
+
+26 ^ 3 - dim(counts)[1]
+```
+
+The above shows how many suffixes are *missing,* or not attested, out of the
+expected $26^3 = 17576$.
+
+## Most common suffixes
+
+```{r print-kable-top}
+counts %>%
+  arrange(desc(count), suffix) %>%
+  select(suffix, count) %>%
+  head(n=35) %>%
+  kable()
+```
+
+# Uncommon suffixes
+
+```{r expand}
+counts %>% expand(s1, s2, s3) -> expanded
+
+left_join(expanded, counts, by=c('s1', 's2', 's3')) -> counts_all
+
+dim(expanded)
+dim(counts_all)
+26^3
+```
+
+Compare dimension of `expanded` and `counts_all` with the expected $26^3$.
+Expect to see 17,576 show up in all of those.
+
+
+## Table of never-used suffixes
+
+```{r filter-na}
+counts_all %>%
+  filter(is.na(count)) -> forbidden
+
+dim(forbidden)[1]
+26 ^ 3 - dim(counts)[1]
+```
+
+Expect the above two to be equal.
