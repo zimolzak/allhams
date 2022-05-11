@@ -13,6 +13,7 @@ library(tidyr)
 library(knitr)  # kable
 ```
 
+
 # Input data and show size
 
 ```{r reading}
@@ -23,7 +24,7 @@ d_100k = fread(here('ENshort.dat'), header = FALSE, sep="|", quote="")
 
 
 ```{r manual-set-data-size}
-X = d_100k
+X = d_1528k
 dim(X)
 ```
 
@@ -37,9 +38,10 @@ X %>%
     zeronum = V22, othernum = V23, othercode = V24) -> renamed
 ```
 
+
 # String processing of suffixes
 
-```{r suffix}
+```{r suffix-wait}
 renamed %>%
   select(callsign) %>%
   separate(
@@ -61,6 +63,7 @@ dim(presuf)[1] / (26 ^ 3)
 The above shows: How many hams have a 3-char suffix, what proportion of hams
 have a 3-char suffix, and how many hams per suffix (mean).
 
+
 # Count unique suffixes
 
 ```{r distribution}
@@ -76,6 +79,7 @@ presuf %>%
 The above shows how many suffixes are *missing,* or not attested, out of the
 expected $26^3 = 17576$.
 
+
 ## Most common suffixes
 
 ```{r print-kable-top}
@@ -85,6 +89,7 @@ counts %>%
   head(n=35) %>%
   kable()
 ```
+
 
 # Uncommon suffixes
 
@@ -99,7 +104,10 @@ dim(counts_all)
 ```
 
 Compare dimension of `expanded` and `counts_all` with the expected $26^3$.
-Expect to see 17,576 show up in all of those.
+Expect to see 17,576 show up in all of those. **Funny thing:** Now I am
+seeing 18,252 in the `expanded` data frame. Why? That equals
+$26 \cdot 26 \cdot 27$. Must be extra weird character in `s1` or `s2` or
+`s3`.
 
 
 ## Table of never-used suffixes
@@ -112,4 +120,15 @@ dim(forbidden)[1]
 26 ^ 3 - dim(counts)[1]
 ```
 
-Expect the above two to be equal.
+Expect the above two to be equal. But again, weird. I am seeing 765
+versus 89. It so happens that $765 - 89 = 26^3$. Seems like `s3` is
+sometimes equal to the string "0".
+
+## Diagnostic
+
+```{r diagnostic}
+counts %>% filter(s3 == 0) %>% kable()
+```
+
+I even wonder if this is a typo in the database of "zero" replacing
+"capital letter O, as in Oscar."
