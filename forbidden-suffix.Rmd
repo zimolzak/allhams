@@ -9,6 +9,7 @@ output: pdf_document
 library(here)
 library(dplyr)
 library(data.table)
+library(tidyr)
 ```
 
 ```{r reading}
@@ -25,5 +26,13 @@ X %>%
     firstname = V9, middlename = V10, lastname = V11, suffix = V12, address = V16,
     city = V17, state = V18, zip = V19, weird_addr_text = V20, misctext = V21,
     zeronum = V22, othernum = V23, othercode = V24) -> renamed
+```
+
+```{r suffix}
+renamed %>%
+  select(callsign) %>%
+  separate(
+    callsign, sep='[0-9]', into=c('prefix', 'suffix'), extra='merge'
+  ) -> presuf
 ```
 
