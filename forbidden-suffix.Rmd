@@ -62,9 +62,10 @@ X %>%
 
 ```{r split-suffix-40sec}
 renamed %>%
-  select(callsign) %>%
+  select(callsign, firstname, lastname, city, state) %>%
   separate(
-    callsign, sep='[0-9]', into=c('prefix', 'suffix'), extra='merge'
+    callsign, sep='[0-9]', into=c('prefix', 'suffix'),
+    remove=FALSE, extra='merge'
   ) %>%
   mutate(len_suf = nchar(suffix)) %>%
   filter(len_suf >= 3) %>%
@@ -245,10 +246,12 @@ By inspection, a lot start with "X" for some reason. And also "QU."
 
 ```{r}
 counts %>%
-  filter(count <= 57 & s1 != 'X') %>%
+  filter(count <= 56 & s1 != 'X') %>%
   filter(! (s1 == 'Q' & s2 == 'U')) %>%
   arrange(desc(count)) %>%
-  select(suffix, count) %>%
+  select(suffix, count) -> below_57
+
+below_57 %>%
   kable()
 ```
 
@@ -264,7 +267,52 @@ qplot(counts$count) +
 
 I think I should change the cutoff to around 62. *Update:* tried that, and the only
 interesting one in that range was "GOD," weighing in at a count of 60. So I changed
-the threshold once again to $\le 57$. That gives the 38 rarest suffixes.
+the threshold once again to $\le 56$. That gives the 37 rarest suffixes.
 
 Definitely includes some slurs. But also double-meaning words (nut, pig, gas, box,
 sob). Most amusing one is "LID."
+
+
+
+
+# Analysis of sketchy ones
+
+```{r}
+left_join(below_57, presuf, by='suffix') -> sketchy_people
+
+sketchy_people %>%
+  arrange(suffix, state) %>%
+  group_by(suffix, state) %>%
+  summarise(n_calls = n(), tot_suf = mean(count)) -> suffix_state_t1
+
+suffix_state_t1 %>%
+  group_by(state) %>%
+  summarise(tot_state = sum(n_calls)) -> t2
+
+n_sketchy <- dim(sketchy_people)[1]
+
+left_join(suffix_state_t1, t2, by = 'state') %>%
+  ungroup() %>%
+  mutate(
+    n_sketchy = n_sketchy,
+    expected = tot_suf * tot_state / n_sketchy,
+    obs_over_exp = n_calls / expected,
+    r_state = dense_rank(state),
+    r_suffix = dense_rank(suffix)
+  ) -> suffix_state
+
+n_sketchy
+sum(t2$tot_state)
+
+```
+
+Many of the sketchy-seeming ones turn out to be people's initials.
+Also, a few seem to be "reclaiming" the slur (inference based on assumed
+nationality of last names).
+
+```{r heatmap}
+ggplot(suffix_state, aes(state, suffix)) +
+  geom_raster(aes(fill = obs_over_exp)) +
+  theme(legend.position="none")
+```
+
