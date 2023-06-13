@@ -2,7 +2,6 @@
 *.dat
 counts
 *.zip
-*.txt
 *~
 *.pdf
 texas-2m-repeaters-2022-01-10.csv
@@ -13,5 +12,9 @@ my_lat_long.csv
 .Rapp.history
 .RDataTmp
 .Rhistory
+.idea/
+
+out.txt
+repeaters_out.txt
 
 !forbidden-suffix-2022-05-11.pdf
