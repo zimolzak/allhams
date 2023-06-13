@@ -11,7 +11,11 @@ COLUMN_NAMES = [
     'arrl_outgoing', 'third_party', 'note_nr', 'deleted'  # generated columns
 ]
 
-DF = pd.DataFrame([[None] * len(COLUMN_NAMES)], columns = COLUMN_NAMES)
+DF = pd.DataFrame(
+    [['x', 'x', 'x', 'x', 'x', 'x', False, False, '0',   False]],
+    # pref enti cont ituz cqzo dxcc arrl   thir   note dele
+    columns = COLUMN_NAMES
+)
 
 def split_multiple(string, columns):
     result = []
@@ -81,8 +85,8 @@ DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
 
 notes_df = pd.read_table('notes.txt', sep='|')
 #final_df = pd.merge(DF, notes_df, how='outer', on=['deleted', 'note_nr'])
-print(notes_df.deleted)
-print(DF.deleted)
+print(notes_df.note_nr)
+print(DF.note_nr)
 quit()
 
 
