@@ -1,12 +1,12 @@
-1    Unofficial prefix.
-2    (5T) June 20, 1960
-3    (5U) August 3, 1960
-4    (6V,6W) June 20, 1960
-5    (7O) May 22, 1990
-6    (9A; S5) June 26, 1991
-7    (9G) March 5, 1957
-8    (9M2,4; 9M6,8) September 16, 1963
-9    (9U; 9X) July 1, 1962
+1   Unofficial prefix.
+2   (5T) June 20, 1960
+3   (5U) August 3, 1960
+4   (6V,6W) June 20, 1960
+5   (7O) May 22, 1990
+6   (9A; S5) June 26, 1991
+7   (9G) March 5, 1957
+8   (9M2,4; 9M6,8) September 16, 1963
+9   (9U; 9X) July 1, 1962
 10   (9V) Contacts made from September 16, 1963 to August 8, 1965, count for West Malaysia.
 11   (BS7) January 1, 1995
 12   (BV9P) January 1, 1994
@@ -54,55 +54,55 @@
 54   (Z8) July 14, 2011
 55   (Z6) January 21, 2018
 
-1    Unofficial prefix.
-2    (Blenheim Reef) May 4, 1967, to June 30, 1975, count for this entity.  Contacts made July 1, 1975, and after, count as Chagos Is. (VQ9).
-3    (Geyser Reef) May 4, 1967, to February 28, 1978, count for this entity.
-4    (Abu Ail Is.)  March 30, 1991, and before, count for this entity.
-5    (1M) July 15, 1972, and before, count for this entity.  Contacts made July 16, 1972, and after, count as Tonga (A3).
-6    (4W) May 21, 1990, and before, count for this entity.
-7    (7J1) May 30, 1976, to November 30, 1980, count for this entity.  Contacts made December 1, 1980, and after, count as Ogasawara (JD1).
-8    (8Z4) December 25, 1981, and before, count for this entity.
-9    (8Z5,9K3) December 14, 1969, and before, count for this entity.
-10   (9S4) March 31, 1957, and before, count for this entity.
+1   Unofficial prefix.
+2   (Blenheim Reef) May 4, 1967, to June 30, 1975, count for this entity.  Contacts made July 1, 1975, and after, count as Chagos Is. (VQ9).
+3   (Geyser Reef) May 4, 1967, to February 28, 1978, count for this entity.
+4   (Abu Ail Is.)  March 30, 1991
+5   (1M) July 15, 1972  Contacts made July 16, 1972, and after, count as Tonga (A3).
+6   (4W) May 21, 1990
+7   (7J1) May 30, 1976, to November 30, 1980, count for this entity.  Contacts made December 1, 1980, and after, count as Ogasawara (JD1).
+8   (8Z4) December 25, 1981
+9   (8Z5,9K3) December 14, 1969
+10   (9S4) March 31, 1957
 11   (9U5) July 1, 1960, to June 30, 1962, count for this entity.  Contacts made July 1, 1962, and after, count as Burundi (9U) or Rwanda (9X).
-12   (AC3) April 30, 1975, and before, count for this entity.  Contacts made May 1, 1975, and after, count as India (VU).
-13   (AC4) May 30, 1974, and before, count for this entity.  Contacts made May 31, 1974, and after, count as China (B).
-14   (C9) September 15, 1963, and before, count for this entity.  Contacts made September 16, 1963, and after, count as China (B).
-15   (CN2) June 30, 1960, and before, count for this entity.  Contacts made July 1, 1960, and after, count as Morocco (CN).
-16   (CR8 (Damao, Diu); CR8 (Goa)) December 31, 1961, and before, count for this entity.
-17   (CR8,CR10) September 14, 1976, and before, count for this entity.
-18   (DA-DM) September 16, 1973, and before, count for this entity.  Contacts made September 17, 1973, and after, count as Federal Republic of Germany (DA-DL) or German Democratic Republic (Y2-Y9).
+12   (AC3) April 30, 1975  Contacts made May 1, 1975, and after, count as India (VU).
+13   (AC4) May 30, 1974  Contacts made May 31, 1974, and after, count as China (B).
+14   (C9) September 15, 1963  Contacts made September 16, 1963, and after, count as China (B).
+15   (CN2) June 30, 1960  Contacts made July 1, 1960, and after, count as Morocco (CN).
+16   (CR8 (Damao, Diu); CR8 (Goa)) December 31, 1961
+17   (CR8,CR10) September 14, 1976
+18   (DA-DM) September 16, 1973  Contacts made September 17, 1973, and after, count as Federal Republic of Germany (DA-DL) or German Democratic Republic (Y2-Y9).
 19   (DM,Y2-9) September 17, 1973, to October 2, 1990, count for this entity.  On October 3, 1990, German Democratic Republic became part of Federal Republic of Germany.
-20   (EA9) May 13, 1969, and before, count for this entity.
-21   (FF) August 6, 1960, and before, count for this entity.
-22   (FH,FB8) July 5, 1975, and before, count for this entity.  Contacts made July 6, 1975, and after, count as Comoros (D6) or Mayotte (FH,TO).
-23   (FI8) December 20, 1950, and before, count for this entity.
-24   (FN8) October 31, 1954, and before, count for this entity.
-25   (FQ8) August 16, 1960, and before, count for this entity.
-26   (HK0; HK0,KP3,KS4) September 16, 1981, and before, count for this entity.  Contacts made September 17, 1981, and after, count as San Andres (HK0).
-27   (I1) March 31, 1957, and before, count for this entity.
-28   (I5) June 30, 1960, and before, count for this entity.
-29   (JZ0) April 30, 1963, and before, count for this entity.
-30	 (KH5K) March 29, 2016, and before, count for this entity.  
-31   (KR6,8,JR6,KA6) May 14, 1972, and before, count for this entity.  Contacts made May 15, 1972, and after, count as Japan (JA-JS,7J-7N).
-32   (KS4) August 31, 1972, and before, count for this entity.  Contacts made September 1, 1972, and after, count as Honduras (HQ,HR).
-33   (KZ5) September 30, 1979, and before, count for this entity.
-34   (OK-OM) December 31, 1992, and before, count for this entity.
-35   (P2,VK9 (Papua Territory); P2,VK9 (Territory of New Guinea)) September 15, 1975, and before, count for this entity. Contacts made September 16, 1975, and after, count as Papua New Guinea (P2).
-36   (PJ (Bonaire, Curacao); PJ (St. Maarten, Saba, St. Eustatius)) October 9, 2010, and before, count for this entity.
-37   (PK1-3; PK4; PK5; PK6) April 30, 1963, and before, count for this entity.  Contacts made May 1, 1963, and after, count as Indonesia (YB-YH).
+20   (EA9) May 13, 1969
+21   (FF) August 6, 1960
+22   (FH,FB8) July 5, 1975  Contacts made July 6, 1975, and after, count as Comoros (D6) or Mayotte (FH,TO).
+23   (FI8) December 20, 1950
+24   (FN8) October 31, 1954
+25   (FQ8) August 16, 1960
+26   (HK0; HK0,KP3,KS4) September 16, 1981  Contacts made September 17, 1981, and after, count as San Andres (HK0).
+27   (I1) March 31, 1957
+28   (I5) June 30, 1960
+29   (JZ0) April 30, 1963
+30   (KH5K) March 29, 2016
+31   (KR6,8,JR6,KA6) May 14, 1972  Contacts made May 15, 1972, and after, count as Japan (JA-JS,7J-7N).
+32   (KS4) August 31, 1972  Contacts made September 1, 1972, and after, count as Honduras (HQ,HR).
+33   (KZ5) September 30, 1979
+34   (OK-OM) December 31, 1992
+35   (P2,VK9 (Papua Territory); P2,VK9 (Territory of New Guinea)) September 15, 1975 Contacts made September 16, 1975, and after, count as Papua New Guinea (P2).
+36   (PJ (Bonaire, Curacao); PJ (St. Maarten, Saba, St. Eustatius)) October 9, 2010
+37   (PK1-3; PK4; PK5; PK6) April 30, 1963  Contacts made May 1, 1963, and after, count as Indonesia (YB-YH).
 38   (ST0) May 7, 1972, to December 31, 1994, count for this entity.
-39   (UN1) June 30, 1960, and before, count for this entity.  Contacts made July 1, 1960, and after, count as European Russia (UA-UI1-7,RA-RZ).
-40   (VO) March 31, 1949, and before, count for this entity.  Contacts made April 1, 1949, and after, count as Canada (VA-VG,VO,VY).
-41   (VQ1,5H1) May 31, 1974, and before, count for this entity.  Contacts made June 1, 1974, and after, count as Tanzania (5H,5I).
-42   (VQ6) June 30, 1960, and before, count for this entity.
-43   (VQ9 (Aldabra); VQ9 (Desroches); VQ9 (Farquhar)) June 28, 1976, and before, count for this entity.  Contacts made June 29, 1976, and after, count as Seychelles (S7).
-44   (VS2,9M2; VS4; ZC5) September 15, 1963, and before, count for this entity.  Contacts made September 16, 1963, and after, count as West Malaysia (9M2,4) or East Malaysia (9M6,8).
-45   (VS9A,P,S) May 21, 1990, and before, count for this entity.
-46   (VS9H) November 29, 1967, and before, count for this entity.
-47   (VS9K) March 10, 1982, and before, count for this entity.
-48   (ZC6,4X1) June 30, 1968, and before, count for this entity.  Contacts made July 1, 1968, and after, count as Israel (4X,4Z).
-49   (ZD4) March 5, 1957, and before, count for this entity.
-50   (ZS0,1) February 29, 1994, and before, count for this entity.
+39   (UN1) June 30, 1960  Contacts made July 1, 1960, and after, count as European Russia (UA-UI1-7,RA-RZ).
+40   (VO) March 31, 1949  Contacts made April 1, 1949, and after, count as Canada (VA-VG,VO,VY).
+41   (VQ1,5H1) May 31, 1974  Contacts made June 1, 1974, and after, count as Tanzania (5H,5I).
+42   (VQ6) June 30, 1960
+43   (VQ9 (Aldabra); VQ9 (Desroches); VQ9 (Farquhar)) June 28, 1976  Contacts made June 29, 1976, and after, count as Seychelles (S7).
+44   (VS2,9M2; VS4; ZC5) September 15, 1963  Contacts made September 16, 1963, and after, count as West Malaysia (9M2,4) or East Malaysia (9M6,8).
+45   (VS9A,P,S) May 21, 1990
+46   (VS9H) November 29, 1967
+47   (VS9K) March 10, 1982
+48   (ZC6,4X1) June 30, 1968  Contacts made July 1, 1968, and after, count as Israel (4X,4Z).
+49   (ZD4) March 5, 1957
+50   (ZS0,1) February 29, 1994
 51   (ZS9) September 1, 1977, to February 28, 1994, count for this entity.
-52   (R1/M) February 16, 2012, and before, count for this entity.
+52   (R1/M) February 16, 2012
