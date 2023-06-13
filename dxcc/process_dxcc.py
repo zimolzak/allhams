@@ -4,7 +4,10 @@ from tqdm import tqdm
 
 IMPORTANT_COLUMNS = [4, 24, 59, 65, 71, 77, 80]
 PAREN_RE = re.compile('\(.*\)')
-COLUMN_NAMES = ['prefix', 'entity', 'continent', 'itu_zone', 'cq_zone', 'dxcc_code', 'arrl_outgoing', 'third_party', 'note']
+COLUMN_NAMES = [
+    'prefix', 'entity', 'continent', 'itu_zone', 'cq_zone', 'dxcc_code',  # columns directly from txt
+    'arrl_outgoing', 'third_party', 'note', 'deleted'  # generated columns
+]
 
 DF = pd.DataFrame([[None] * len(COLUMN_NAMES)], columns = COLUMN_NAMES)
 
@@ -17,12 +20,17 @@ def split_multiple(string, columns):
 if __name__ == '__main__':
     with open('dxcc 2022_Current_Deleted.txt') as fh:
         printing = False
+        deleted = False
         for line in tqdm(fh, total=564):
 
             # Data do not start until after a lot of underscores.
             if '____' in line:
                 printing = True
                 continue
+
+            # Turn on deleted entry flag when certain line matched
+            if 'DELETED' in line:
+                deleted = True
 
             # Long lines are very likely footnotes.
             if len(line) > 81:
@@ -59,11 +67,12 @@ if __name__ == '__main__':
                 if entity == '':
                     continue
 
+                # Make pandas data frame
                 df_row = pd.DataFrame(
-                    [[prefix, entity, continent, itu_zone, cq_zone, dxcc_code, arrl_outgoing, third_party, note]],
+                    [[prefix, entity, continent, itu_zone, cq_zone, dxcc_code, arrl_outgoing, third_party, note, deleted]],
                     columns=COLUMN_NAMES
                 )
-
                 DF = pd.merge(DF, df_row, how='outer')
 
-print(DF[['prefix', 'dxcc_code']])
+DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
+print(DF[['prefix', 'dxcc_code', 'deleted']].sort_values('dxcc_code'))
