@@ -55,54 +55,54 @@ False|53|(PJ7)|starting 0400 UTC October 10, 2010||
 False|54|(Z8)|July 14, 2011||
 False|55|(Z6)|January 21, 2018||
 True|1||||Unofficial prefix.
-True|2|(Blenheim Reef)|May 4, 1967, to June 30, 1975, count for this entity.  Contacts made July 1, 1975, and after, count as Chagos Is. (VQ9).
-True|3|(Geyser Reef)|May 4, 1967, to February 28, 1978, count for this entity.
-True|4|(Abu Ail Is.)| March 30, 1991
-True|5|(1M)|July 15, 1972  Contacts made July 16, 1972, and after, count as Tonga (A3).
-True|6|(4W)|May 21, 1990
-True|7|(7J1)|May 30, 1976, to November 30, 1980, count for this entity.  Contacts made December 1, 1980, and after, count as Ogasawara (JD1).
-True|8|(8Z4)|December 25, 1981
-True|9|(8Z5,9K3)|December 14, 1969
-True|10|(9S4)|March 31, 1957
-True|11|(9U5)|July 1, 1960, to June 30, 1962, count for this entity.  Contacts made July 1, 1962, and after, count as Burundi (9U) or Rwanda (9X).
-True|12|(AC3)|April 30, 1975  Contacts made May 1, 1975, and after, count as India (VU).
-True|13|(AC4)|May 30, 1974  Contacts made May 31, 1974, and after, count as China (B).
-True|14|(C9)|September 15, 1963  Contacts made September 16, 1963, and after, count as China (B).
-True|15|(CN2)|June 30, 1960  Contacts made July 1, 1960, and after, count as Morocco (CN).
-True|16|(CR8 (Damao, Diu); CR8 (Goa))|December 31, 1961
-True|17|(CR8,CR10)|September 14, 1976
-True|18|(DA-DM)|September 16, 1973  Contacts made September 17, 1973, and after, count as Federal Republic of Germany (DA-DL) or German Democratic Republic (Y2-Y9).
-True|19|(DM,Y2-9)|September 17, 1973, to October 2, 1990, count for this entity.  On October 3, 1990, German Democratic Republic became part of Federal Republic of Germany.
-True|20|(EA9)|May 13, 1969
-True|21|(FF)|August 6, 1960
-True|22|(FH,FB8)|July 5, 1975  Contacts made July 6, 1975, and after, count as Comoros (D6) or Mayotte (FH,TO).
-True|23|(FI8)|December 20, 1950
-True|24|(FN8)|October 31, 1954
-True|25|(FQ8)|August 16, 1960
-True|26|(HK0; HK0,KP3,KS4)|September 16, 1981  Contacts made September 17, 1981, and after, count as San Andres (HK0).
-True|27|(I1)|March 31, 1957
-True|28|(I5)|June 30, 1960
-True|29|(JZ0)|April 30, 1963
-True|30|(KH5K)|March 29, 2016
-True|31|(KR6,8,JR6,KA6)|May 14, 1972  Contacts made May 15, 1972, and after, count as Japan (JA-JS,7J-7N).
-True|32|(KS4)|August 31, 1972  Contacts made September 1, 1972, and after, count as Honduras (HQ,HR).
-True|33|(KZ5)|September 30, 1979
-True|34|(OK-OM)|December 31, 1992
-True|35|(P2,VK9 (Papua Territory); P2,VK9 (Territory of New Guinea))|September 15, 1975 Contacts made September 16, 1975, and after, count as Papua New Guinea (P2).
-True|36|(PJ (Bonaire, Curacao); PJ (St. Maarten, Saba, St. Eustatius))|October 9, 2010
-True|37|(PK1-3; PK4; PK5; PK6)|April 30, 1963  Contacts made May 1, 1963, and after, count as Indonesia (YB-YH).
-True|38|(ST0)|May 7, 1972, to December 31, 1994, count for this entity.
-True|39|(UN1)|June 30, 1960  Contacts made July 1, 1960, and after, count as European Russia (UA-UI1-7,RA-RZ).
-True|40|(VO)|March 31, 1949  Contacts made April 1, 1949, and after, count as Canada (VA-VG,VO,VY).
-True|41|(VQ1,5H1)|May 31, 1974  Contacts made June 1, 1974, and after, count as Tanzania (5H,5I).
-True|42|(VQ6)|June 30, 1960
-True|43|(VQ9 (Aldabra); VQ9 (Desroches); VQ9 (Farquhar))|June 28, 1976  Contacts made June 29, 1976, and after, count as Seychelles (S7).
-True|44|(VS2,9M2; VS4; ZC5)|September 15, 1963  Contacts made September 16, 1963, and after, count as West Malaysia (9M2,4) or East Malaysia (9M6,8).
-True|45|(VS9A,P,S)|May 21, 1990
-True|46|(VS9H)|November 29, 1967
-True|47|(VS9K)|March 10, 1982
-True|48|(ZC6,4X1)|June 30, 1968  Contacts made July 1, 1968, and after, count as Israel (4X,4Z).
-True|49|(ZD4)|March 5, 1957
-True|50|(ZS0,1)|February 29, 1994
-True|51|(ZS9)|September 1, 1977, to February 28, 1994, count for this entity.
-True|52|(R1/M)|February 16, 2012
+True|2|(Blenheim Reef)|May 4, 1967|June 30, 1975|Contacts made July 1, 1975, and after, count as Chagos Is. (VQ9).
+True|3|(Geyser Reef)|May 4, 1967|February 28, 1978|
+True|4|(Abu Ail Is.)||March 30, 1991|
+True|5|(1M)||July 15, 1972|Contacts made July 16, 1972, and after, count as Tonga (A3).
+True|6|(4W)||May 21, 1990|
+True|7|(7J1)|May 30, 1976|November 30, 1980|Contacts made December 1, 1980, and after, count as Ogasawara (JD1).
+True|8|(8Z4)||December 25, 1981|
+True|9|(8Z5,9K3)||December 14, 1969|
+True|10|(9S4)||March 31, 1957|
+True|11|(9U5)|July 1, 1960|June 30, 1962|Contacts made July 1, 1962, and after, count as Burundi (9U) or Rwanda (9X).
+True|12|(AC3)||April 30, 1975|Contacts made May 1, 1975, and after, count as India (VU).
+True|13|(AC4)||May 30, 1974|Contacts made May 31, 1974, and after, count as China (B).
+True|14|(C9)||September 15, 1963|Contacts made September 16, 1963, and after, count as China (B).
+True|15|(CN2)||June 30, 1960|Contacts made July 1, 1960, and after, count as Morocco (CN).
+True|16|(CR8 (Damao, Diu); CR8 (Goa))||December 31, 1961|
+True|17|(CR8,CR10)||September 14, 1976|
+True|18|(DA-DM)||September 16, 1973|Contacts made September 17, 1973, and after, count as Federal Republic of Germany (DA-DL) or German Democratic Republic (Y2-Y9).
+True|19|(DM,Y2-9)|September 17, 1973|October 2, 1990|On October 3, 1990, German Democratic Republic became part of Federal Republic of Germany.
+True|20|(EA9)||May 13, 1969|
+True|21|(FF)||August 6, 1960|
+True|22|(FH,FB8)||July 5, 1975|Contacts made July 6, 1975, and after, count as Comoros (D6) or Mayotte (FH,TO).
+True|23|(FI8)||December 20, 1950|
+True|24|(FN8)||October 31, 1954|
+True|25|(FQ8)||August 16, 1960|
+True|26|(HK0; HK0,KP3,KS4)||September 16, 1981|Contacts made September 17, 1981, and after, count as San Andres (HK0).
+True|27|(I1)||March 31, 1957|
+True|28|(I5)||June 30, 1960|
+True|29|(JZ0)||April 30, 1963|
+True|30|(KH5K)||March 29, 2016|
+True|31|(KR6,8,JR6,KA6)||May 14, 1972|Contacts made May 15, 1972, and after, count as Japan (JA-JS,7J-7N).
+True|32|(KS4)||August 31, 1972|Contacts made September 1, 1972, and after, count as Honduras (HQ,HR).
+True|33|(KZ5)||September 30, 1979|
+True|34|(OK-OM)||December 31, 1992|
+True|35|(P2,VK9 (Papua Territory); P2,VK9 (Territory of New Guinea))||September 15, 1975|Contacts made September 16, 1975, and after, count as Papua New Guinea (P2).
+True|36|(PJ (Bonaire, Curacao); PJ (St. Maarten, Saba, St. Eustatius))||October 9, 2010|
+True|37|(PK1-3; PK4; PK5; PK6)||April 30, 1963|Contacts made May 1, 1963, and after, count as Indonesia (YB-YH).
+True|38|(ST0)|May 7, 1972|December 31, 1994|
+True|39|(UN1)||June 30, 1960|Contacts made July 1, 1960, and after, count as European Russia (UA-UI1-7,RA-RZ).
+True|40|(VO)||March 31, 1949|Contacts made April 1, 1949, and after, count as Canada (VA-VG,VO,VY).
+True|41|(VQ1,5H1)||May 31, 1974|Contacts made June 1, 1974, and after, count as Tanzania (5H,5I).
+True|42|(VQ6)||June 30, 1960|
+True|43|(VQ9 (Aldabra); VQ9 (Desroches); VQ9 (Farquhar))||June 28, 1976|Contacts made June 29, 1976, and after, count as Seychelles (S7).
+True|44|(VS2,9M2; VS4; ZC5)||September 15, 1963|Contacts made September 16, 1963, and after, count as West Malaysia (9M2,4) or East Malaysia (9M6,8).
+True|45|(VS9A,P,S)||May 21, 1990|
+True|46|(VS9H)||November 29, 1967|
+True|47|(VS9K)||March 10, 1982|
+True|48|(ZC6,4X1)||June 30, 1968|Contacts made July 1, 1968, and after, count as Israel (4X,4Z).
+True|49|(ZD4)||March 5, 1957|
+True|50|(ZS0,1)||February 29, 1994|
+True|51|(ZS9)|September 1, 1977|February 28, 1994|
+True|52|(R1/M)||February 16, 2012|
