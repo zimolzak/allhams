@@ -2,6 +2,8 @@ import re
 import pandas as pd
 from tqdm import tqdm
 
+pd.set_option('display.max_rows', 500)
+
 IMPORTANT_COLUMNS = [4, 24, 59, 65, 71, 77, 80]
 PAREN_RE = re.compile('\(.*\)')
 COLUMN_NAMES = [
@@ -32,11 +34,7 @@ if __name__ == '__main__':
             if 'DELETED' in line:
                 deleted = True
 
-            # Long lines are very likely footnotes.
-            if len(line) > 81:
-                continue
-
-            # Short lines without lots of spaces are likely footnotes.
+            # Lines without lots of spaces are likely footnotes.
             if '     ' not in line:
                 continue
 
@@ -66,6 +64,9 @@ if __name__ == '__main__':
                 # Skip blank line.
                 if entity == '':
                     continue
+                # Skip header of deleted entities
+                if 'Prefix' in prefix:
+                    continue
 
                 # Make pandas data frame
                 df_row = pd.DataFrame(
@@ -75,4 +76,7 @@ if __name__ == '__main__':
                 DF = pd.merge(DF, df_row, how='outer')
 
 DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
-print(DF[['prefix', 'dxcc_code', 'deleted']].sort_values('dxcc_code'))
+
+#### Outputs
+
+print(DF['deleted'].value_counts())
