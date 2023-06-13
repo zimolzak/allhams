@@ -1,60 +1,60 @@
-deleted|note|paren|text
-False|1|Unofficial prefix.
-False|2|(5T)|June 20, 1960
-False|3|(5U)|August 3, 1960
-False|4|(6V,6W)|June 20, 1960
-False|5|(7O)|May 22, 1990
-False|6|(9A; S5)|June 26, 1991
-False|7|(9G)|March 5, 1957
-False|8|(9M2,4; 9M6,8)|September 16, 1963
-False|9|(9U; 9X)|July 1, 1962
-False|10|(9V)|Contacts made from September 16, 1963 to August 8, 1965, count for West Malaysia.
-False|11|(BS7)|January 1, 1995
-False|12|(BV9P)|January 1, 1994
-False|13|(D6; FH,TO)|July 6, 1975
-False|14|(DA-DR)|with DA-DL stations September 17, 1973, and after, and contacts made with Y2-Y9 stations October 3, 1990, and after, count for this entity.
-False|15|(E3)|November 14, 1962, and before, or May 24, 1991, and after, count for this entity.
-False|16|(FO,TO; FO,TX (Marquesas Is./Austral Is.))|April 1, 1998
-False|17|(FT/G,TO; FT/J,E,TO)|June 25, 1960
-False|18|(H40)|April 1, 1998
-False|19|(JD1 (Minami Torishima))|Formerly Marcus Island.
-False|20|(JD1 (Ogasawara))|Formerly Bonin and Volcano Islands.
-False|21|(T8)|Valid prefix January 1, 1994, or after (KC6 prior to this date).
-False|22|(KP5)|March 1, 1979
-False|23|(OK,OL; OM)|January 1, 1993
-False|24|(P2)|September 16, 1975
-False|25|(P4)|January 1, 1986
-False|26|(P5)|May 14, 1995
-False|27|(S0)|Contacts with Rio de Oro (Spanish Sahara), EA9, also count for this entity.
-False|28|(T2)|January 1, 1976
-False|29|(E7)|New prefix for Bosnia-Herzegovina effective November 17, 2007.  Contacts are valid for this entity effective October 15, 1991.
-False|30|(TL)|August 13, 1960
-False|31|(TN)|August 15, 1960
-False|32|(TR)|August 17, 1960
-False|33|(TT)|August 11, 1960
-False|34|(TU)|August 7, 1960
-False|35|(TY)|August 1, 1960
-False|36|(TZ)|June 20, 1960
-False|37|(V4; VP2E; VP2M; VP2V)|For DXCC credit for contacts made May 31, 1958, and before, see page 97, June 1958 QST.
-False|38|(V6)|Includes Yap Islands January 1, 1981, and after.
-False|39|(XT)|August 16, 1960
-False|40|(YB-YH)|May 1, 1963
-False|41|(Z3)|September 8, 1991
-False|42|(ZC4)|August 16, 1960
-False|43|(E4)|February 1, 1999
-False|44|(4W)|March 1, 2000
-False|45|(FK,TX (Chesterfield Is.))|March 23, 2000
-False|46|(VP6)|November 16, 2001
-False|47|(4O)|June 28, 2006
-False|48|(KH8)|July 22, 2006
-False|49|(FJ,TO)|December 14, 2007
-False|50|(PJ2)|starting 0400 UTC October 10, 2010
-False|51|(PJ4)|starting 0400 UTC October 10, 2010
-False|52|(PJ5,6)|starting 0400 UTC October 10, 2010
-False|53|(PJ7)|starting 0400 UTC October 10, 2010
-False|54|(Z8)|July 14, 2011
-False|55|(Z6)|January 21, 2018
-True|1|Unofficial prefix.
+deleted|n|paren|startdate|enddate|text
+False|1||||Unofficial prefix.
+False|2|(5T)|June 20, 1960||
+False|3|(5U)|August 3, 1960||
+False|4|(6V,6W)|June 20, 1960||
+False|5|(7O)|May 22, 1990||
+False|6|(9A; S5)|June 26, 1991||
+False|7|(9G)|March 5, 1957||
+False|8|(9M2,4; 9M6,8)|September 16, 1963||
+False|9|(9U; 9X)|July 1, 1962||
+False|10|(9V)|||Contacts made from September 16, 1963 to August 8, 1965, count for West Malaysia.
+False|11|(BS7)|January 1, 1995||
+False|12|(BV9P)|January 1, 1994||
+False|13|(D6; FH,TO)|July 6, 1975||
+False|14|(DA-DR)|||Contacts with DA-DL stations September 17, 1973, and after, and contacts made with Y2-Y9 stations October 3, 1990, and after, count for this entity.
+False|15|(E3)|||November 14, 1962, and before, or May 24, 1991, and after, count for this entity.
+False|16|(FO,TO; FO,TX (Marquesas Is./Austral Is.))|April 1, 1998||
+False|17|(FT/G,TO; FT/J,E,TO)|June 25, 1960||
+False|18|(H40)|April 1, 1998||
+False|19|(JD1 (Minami Torishima))|||Formerly Marcus Island.
+False|20|(JD1 (Ogasawara))|||Formerly Bonin and Volcano Islands.
+False|21|(T8)|January 1, 1994||(KC6 prior to this date).
+False|22|(KP5)|March 1, 1979||
+False|23|(OK,OL; OM)|January 1, 1993||
+False|24|(P2)|September 16, 1975||
+False|25|(P4)|January 1, 1986||
+False|26|(P5)|May 14, 1995||
+False|27|(S0)|||Contacts with Rio de Oro (Spanish Sahara), EA9, also count for this entity.
+False|28|(T2)|January 1, 1976||
+False|29|(E7)|||New prefix for Bosnia-Herzegovina effective November 17, 2007.  Contacts are valid for this entity effective October 15, 1991.
+False|30|(TL)|August 13, 1960||
+False|31|(TN)|August 15, 1960||
+False|32|(TR)|August 17, 1960||
+False|33|(TT)|August 11, 1960||
+False|34|(TU)|August 7, 1960||
+False|35|(TY)|August 1, 1960||
+False|36|(TZ)|June 20, 1960||
+False|37|(V4; VP2E; VP2M; VP2V)|||For DXCC credit for contacts made May 31, 1958, and before, see page 97, June 1958 QST.
+False|38|(V6)|||Includes Yap Islands January 1, 1981, and after.
+False|39|(XT)|August 16, 1960||
+False|40|(YB-YH)|May 1, 1963||
+False|41|(Z3)|September 8, 1991||
+False|42|(ZC4)|August 16, 1960||
+False|43|(E4)|February 1, 1999||
+False|44|(4W)|March 1, 2000||
+False|45|(FK,TX (Chesterfield Is.))|March 23, 2000||
+False|46|(VP6)|November 16, 2001||
+False|47|(4O)|June 28, 2006||
+False|48|(KH8)|July 22, 2006||
+False|49|(FJ,TO)|December 14, 2007||
+False|50|(PJ2)|starting 0400 UTC October 10, 2010||
+False|51|(PJ4)|starting 0400 UTC October 10, 2010||
+False|52|(PJ5,6)|starting 0400 UTC October 10, 2010||
+False|53|(PJ7)|starting 0400 UTC October 10, 2010||
+False|54|(Z8)|July 14, 2011||
+False|55|(Z6)|January 21, 2018||
+True|1||||Unofficial prefix.
 True|2|(Blenheim Reef)|May 4, 1967, to June 30, 1975, count for this entity.  Contacts made July 1, 1975, and after, count as Chagos Is. (VQ9).
 True|3|(Geyser Reef)|May 4, 1967, to February 28, 1978, count for this entity.
 True|4|(Abu Ail Is.)| March 30, 1991
