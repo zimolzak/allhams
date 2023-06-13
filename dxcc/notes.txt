@@ -1,4 +1,4 @@
-deleted|n|paren|startdate|enddate|text
+deleted|note_nr|paren|startdate|enddate|text
 False|1||||Unofficial prefix.
 False|2|(5T)|June 20, 1960||
 False|3|(5U)|August 3, 1960||

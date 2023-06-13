@@ -8,7 +8,7 @@ IMPORTANT_COLUMNS = [4, 24, 59, 65, 71, 77, 80]
 PAREN_RE = re.compile('\(.*\)')
 COLUMN_NAMES = [
     'prefix', 'entity', 'continent', 'itu_zone', 'cq_zone', 'dxcc_code',  # columns directly from txt
-    'arrl_outgoing', 'third_party', 'note', 'deleted'  # generated columns
+    'arrl_outgoing', 'third_party', 'note_nr', 'deleted'  # generated columns
 ]
 
 DF = pd.DataFrame([[None] * len(COLUMN_NAMES)], columns = COLUMN_NAMES)
@@ -17,7 +17,7 @@ def split_multiple(string, columns):
     result = []
     for i in range(len(columns) - 1):
         result.append(string[columns[i]:columns[i+1]])
-    return [s.rstrip() for s in result]
+    return [s.rstrip() for s in result]   # should have done pandas read_fwf()
 
 if __name__ == '__main__':
     with open('dxcc 2022_Current_Deleted.txt') as fh:
@@ -76,6 +76,15 @@ if __name__ == '__main__':
                 DF = pd.merge(DF, df_row, how='outer')
 
 DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
+
+#### Merge
+
+notes_df = pd.read_table('notes.txt', sep='|')
+#final_df = pd.merge(DF, notes_df, how='outer', on=['deleted', 'note_nr'])
+print(notes_df.deleted)
+print(DF.deleted)
+quit()
+
 
 #### Outputs
 

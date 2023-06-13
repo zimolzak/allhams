@@ -1,4 +1,4 @@
-,prefix,entity,continent,itu_zone,cq_zone,dxcc_code,arrl_outgoing,third_party,note,deleted
+,prefix,entity,continent,itu_zone,cq_zone,dxcc_code,arrl_outgoing,third_party,note_nr,deleted
 1,,Spratly Is.,AS,50,26,247,False,False,1,False
 2,1A,Sovereign Military Order of Malta,EU,28,15,246,False,False,1,False
 3,3A,Monaco,EU,27,14,260,True,False,,False
