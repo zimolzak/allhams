@@ -1,7 +1,12 @@
 import re
+import pandas as pd
+from tqdm import tqdm
 
 IMPORTANT_COLUMNS = [4, 24, 59, 65, 71, 77, 80]
 PAREN_RE = re.compile('\(.*\)')
+COLUMN_NAMES = ['prefix', 'entity', 'continent', 'itu_zone', 'cq_zone', 'dxcc_code', 'arrl_outgoing', 'third_party', 'note']
+
+DF = pd.DataFrame([[None] * len(COLUMN_NAMES)], columns = COLUMN_NAMES)
 
 def split_multiple(string, columns):
     result = []
@@ -12,7 +17,7 @@ def split_multiple(string, columns):
 if __name__ == '__main__':
     with open('dxcc 2022_Current_Deleted.txt') as fh:
         printing = False
-        for line in fh:
+        for line in tqdm(fh, total=564):
 
             # Data do not start until after a lot of underscores.
             if '____' in line:
@@ -54,4 +59,11 @@ if __name__ == '__main__':
                 if entity == '':
                     continue
 
-                print((prefix, entity, continent, itu_zone, cq_zone, dxcc_code, arrl_outgoing, third_party, note))
+                df_row = pd.DataFrame(
+                    [[prefix, entity, continent, itu_zone, cq_zone, dxcc_code, arrl_outgoing, third_party, note]],
+                    columns=COLUMN_NAMES
+                )
+
+                DF = pd.merge(DF, df_row, how='outer')
+
+print(DF[['prefix', 'dxcc_code']])
