@@ -79,4 +79,14 @@ DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
 
 #### Outputs
 
+print()
+print(DF['continent'].value_counts())
+print()
+print(DF['arrl_outgoing'].value_counts())
+print()
+print(DF['third_party'].value_counts())
+print()
 print(DF['deleted'].value_counts())
+print()
+
+DF.to_csv('dxcc.csv')
