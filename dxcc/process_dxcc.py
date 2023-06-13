@@ -13,7 +13,7 @@ COLUMN_NAMES = [
 
 DF = pd.DataFrame(
     [['x', 'x', 'x', 'x', 'x', 'x', False, False, '0',   False]],
-    # pref enti cont ituz cqzo dxcc arrl   thir   note dele
+    # pref enti cont ituz cqzo dxcc arrl   thir   note   dele
     columns = COLUMN_NAMES
 )
 
@@ -79,15 +79,14 @@ if __name__ == '__main__':
                 )
                 DF = pd.merge(DF, df_row, how='outer')
 
-DF = DF.iloc[1:]  # Drop the [None, None, ....] row.
+DF = DF.iloc[1:]  # Drop the initial row of made-up data
+
 
 #### Merge
 
 notes_df = pd.read_table('notes.txt', sep='|')
-#final_df = pd.merge(DF, notes_df, how='outer', on=['deleted', 'note_nr'])
-print(notes_df.note_nr)
-print(DF.note_nr)
-quit()
+notes_df['note_nr'] = notes_df['note_nr'].map(str)  # Won't work to merge an int with 'object' (meaning str).
+final_df = pd.merge(DF, notes_df, how='outer', on=['deleted', 'note_nr'])
 
 
 #### Outputs
@@ -103,3 +102,4 @@ print(DF['deleted'].value_counts())
 print()
 
 DF.to_csv('dxcc.csv')
+final_df.to_csv('dxcc_join.csv')
