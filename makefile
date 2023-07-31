@@ -1,4 +1,4 @@
-endpoints = out.txt repeaters_out.txt forbidden-suffix.pdf
+endpoints = out.txt repeaters_out.txt forbidden-suffix.pdf my_log_workflow.png
 incidentals = Rplots.pdf
 intermediates = ENshort.dat
 
@@ -34,6 +34,14 @@ repeaters_out.txt: repeaters.R $(rptcsvs)
 
 %.pdf: %.Rmd
 	Rscript -e "rmarkdown::render('$<')"
+
+# Graphviz
+
+%.png: %.dot
+	dot -Tpng $< > $@
+
+
+
 
 #### clean
 
