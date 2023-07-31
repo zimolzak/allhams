@@ -26,3 +26,13 @@ short_continents = pd.merge(short, dxcc_details[['dxcc', 'continent']], how='lef
 
 final_df.to_csv('who_next.csv')
 short_continents[['dxcc', 'worked', 'rank', 'prefix', 'name', 'continent']].to_csv('who_next_short.csv')
+
+
+
+# Stats
+
+print()
+print(short_continents['continent'].value_counts())
+print()
+print(short_continents['continent'].value_counts() / n_needed)
+print()
