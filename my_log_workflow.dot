@@ -1,3 +1,9 @@
 digraph{
-a -> b;
+
+paper -> KLog_laptop -> LoTW;
+LoTW -> KLog_laptop;
+WSTJ_raspi -> LoTW;
+NetLogger -> LoTW;
+
+
 }
