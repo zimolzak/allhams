@@ -4,6 +4,7 @@ paper -> KLog_laptop -> LoTW;
 LoTW -> KLog_laptop;
 WSTJ_raspi -> LoTW;
 NetLogger -> LoTW;
-
+WSTJ_laptop -> LoTW;
+SKCC_laptop -> LoTW;
 
 }
