@@ -25,7 +25,7 @@ short_continents = pd.merge(short, dxcc_details[['dxcc', 'continent']], how='lef
 # Outputs
 
 final_df.to_csv('who_next.csv')
-short_continents[['dxcc', 'worked', 'rank', 'prefix', 'name', 'continent']].to_csv('who_next_short.csv')
+short_continents[['dxcc', 'prefix', 'name', 'continent']].to_csv('who_next_short.csv')
 
 
 
