@@ -3,6 +3,7 @@ incidentals = Rplots.pdf
 intermediates = ENshort.dat
 
 all: $(endpoints)
+	make -C dxcc
 
 rptcsvs = my_lat_long.csv texas-2m-repeaters-2022-01-10.csv texas-70cm-repeaters-2022-01-10.csv
 zipped = AM.dat EN.dat HD.dat LA.dat SF.dat CO.dat HS.dat SC.dat counts
@@ -39,6 +40,7 @@ repeaters_out.txt: repeaters.R $(rptcsvs)
 clean:
 	rm -f $(zipped) $(endpoints) $(incidentals) $(intermediates)
 # 'counts' is in contents of zip file
+	make -C dxcc clean
 
 deepclean: clean
 	rm -f *.zip
