@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 files = mostwanted.csv dxcc.csv who_next.csv
-incidentals = dxcc_join.csv who_next_short.csv
+incidentals = dxcc_join.csv who_next_short.csv continents_need.csv continents_need_EU.csv
 
 all: $(files)
 

@@ -18,13 +18,22 @@ final_df = pd.merge(mine, wanted, how='outer', on=['dxcc'])
 final_df = final_df[['dxcc', 'worked', 'rank', 'prefix', 'name']]  # drop 'empty'
 final_df = final_df.sort_values('rank', ascending=False)
 
-short = final_df[final_df.worked != True].head(n_needed)
-short_continents = pd.merge(short, dxcc_details[['dxcc', 'continent']], how='left', on=['dxcc'])
+continents_need = pd.merge(
+    final_df[final_df.worked != True],
+    dxcc_details[['dxcc', 'continent']],
+    how='left',
+    on=['dxcc']
+)
+
+short_continents = continents_need.head(n_needed)
+
 
 
 # Outputs
 
 final_df.to_csv('who_next.csv')
+continents_need[['dxcc', 'prefix', 'name', 'continent']].to_csv('continents_need.csv')
+continents_need[['dxcc', 'prefix', 'name', 'continent']][continents_need.continent == 'EU'].to_csv('continents_need_EU.csv')
 short_continents[['dxcc', 'prefix', 'name', 'continent']].to_csv('who_next_short.csv')
 
 
