@@ -1,5 +1,8 @@
 digraph{
 
+KLog [shape="square", penwidth=3];
+LoTW [shape="square", penwidth=3];
+
 paper -> KLog [label="slow"];
 KLog -> LoTW;
 LoTW -> QRZ [label="slow"];
@@ -7,6 +10,6 @@ LoTW -> KLog;
 NetLogger -> LoTW;
 WSJT -> LoTW;
 SKCCLogger -> LoTW;
-Web_cabrillo -> LoTW;
+Cabrillo -> LoTW;
 
 }
