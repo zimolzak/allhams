@@ -1,10 +1,12 @@
 digraph{
 
-paper -> KLog_laptop -> LoTW;
-LoTW -> KLog_laptop;
-WSTJ_raspi -> LoTW;
+paper -> KLog [label="slow"];
+KLog -> LoTW;
+LoTW -> QRZ [label="slow"];
+LoTW -> KLog;
 NetLogger -> LoTW;
-WSTJ_laptop -> LoTW;
-SKCC_laptop -> LoTW;
+WSJT -> LoTW;
+SKCCLogger -> LoTW;
+Web_cabrillo -> LoTW;
 
 }
