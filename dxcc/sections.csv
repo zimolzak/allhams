@@ -1,0 +1,86 @@
+Section,Abbreviation,State,Area,Type
+Connecticut,CT,CT,1,State
+Eastern Massachusetts,EMA,MA,1,easy
+Maine,ME,ME,1,State
+New Hampshire,NH,NH,1,State
+Rhode Island,RI,RI,1,State
+Vermont,VT,VT,1,State
+Western Massachusetts,WMA,MA,1,easy
+Eastern New York,ENY,NY,2,easy
+New York City - Long Island,NLI,NY,2,tricky
+Northern New Jersey,NNJ,NJ,2,easy
+Northern New York,NNY,NY,2,easy
+Southern New Jersey,SNJ,NJ,2,easy
+Western New York,WNY,NY,2,easy
+Delaware,DE,DE,3,State
+Eastern Pennsylvania,EPA,PA,3,easy
+Maryland-DC,MDC,MD,3,easy
+Western Pennsylvania,WPA,PA,3,easy
+Alabama,AL,AL,4,State
+Georgia,GA,GA,4,State
+Kentucky,KY,KY,4,State
+North Carolina,NC,NC,4,State
+Northern Florida,NFL,FL,4,easy
+South Carolina,SC,SC,4,State
+Southern Florida,SFL,FL,4,easy
+West  Central Florida,WCF,FL,4,tricky
+Tennessee,TN,TN,4,State
+Virginia,VA,VA,4,State
+Puerto Rico,PR,PR,4,State
+Virgin Islands,VI,VI,4,tricky
+Arkansas,AR,AR,5,State
+Louisiana,LA,LA,5,State
+Mississippi,MS,MS,5,State
+New Mexico,NM,NM,5,State
+North Texas,NTX,TX,5,easy
+Oklahoma,OK,OK,5,State
+South Texas,STX,TX,5,easy
+West Texas,WTX,TX,5,easy
+East Bay,EB,EB,6,tricky
+Los Angeles,LAX,CA,6,tricky
+Orange,ORG,CA,6,tricky
+Santa Barbara,SB,CA,6,tricky
+Santa Clara Valley,SCV,CA,6,tricky
+San Diego,SDG,CA,6,tricky
+San Francisco,SF,CA,6,tricky
+San Joaquin Valley,SJV,CA,6,tricky
+Sacramento Valley,SV,CA,6,tricky
+Pacific,PAC,CA,6,tricky
+Arizona,AZ,AZ,7,State
+Eastern Washington,EWA,WA,7,easy
+Idaho,ID,ID,7,State
+Montana,MT,MT,7,State
+Nevada,NV,NV,7,State
+Oregon,OR,OR,7,State
+Utah,UT,UT,7,State
+Western Washington,WWA,WA,7,easy
+Wyoming,WY,WY,7,State
+Alaska,AK,AK,7,State
+Michigan,MI,MI,8,State
+Ohio,OH,OH,8,State
+West Virginia,WV,WV,8,State
+Illinois,IL,IL,9,State
+Indiana,IN,IN,9,State
+Wisconsin,WI,WI,9,State
+Colorado,CO,CO,0,State
+Iowa,IA,IA,0,State
+Kansas,KS,KS,0,State
+Minnesota,MN,MN,0,State
+Missouri,MO,MO,0,State
+Nebraska,NE,NE,0,State
+North Dakota,ND,ND,0,State
+South Dakota,SD,SD,0,State
+Newfoundland/Labrador,NL,NL,Can,State
+New Brunswick,NB,NB,Can,State
+Nova Scotia,NS,NS,Can,State
+Prince Edward Island,PE,PE,Can,State
+Quebec,QC,QC,Can,State
+Ontario East,ONE,ON,Can,easy
+Ontario North,ONN,ON,Can,easy
+Ontario South,ONS,ON,Can,easy
+Golden Horseshoe (formerly GTA),GH,ON,Can,tricky
+Manitoba,MB,MB,Can,State
+Saskatchewan,SK,SK,Can,State
+Alberta,AB,AB,Can,State
+British Columbia,BC,BC,Can,State
+Territories,TER,TER,Can,easy
