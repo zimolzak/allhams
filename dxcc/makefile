@@ -1,5 +1,9 @@
 .PHONY: all clean
 
+# flow:
+# mostwanted.txt --> mostwanted.csv
+# notes.txt + dxcc2022 --> dxcc.csv
+
 files = mostwanted.csv dxcc.csv who_next.csv
 incidentals = dxcc_join.csv who_next_short.csv continents_need.csv continents_need_EU.csv
 
