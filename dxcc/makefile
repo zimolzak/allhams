@@ -1,8 +1,9 @@
 .PHONY: all clean
 
 # flow:
-# mostwanted.txt --> mostwanted.csv
-# notes.txt + dxcc2022 --> dxcc.csv
+# mostwanted.txt is some html I cut/pasted
+# dxcc2022 is plain text idiosyncratic table
+# notes is pipe delimited
 
 files = mostwanted.csv dxcc.csv who_next.csv
 incidentals = dxcc_join.csv who_next_short.csv continents_need.csv continents_need_EU.csv
