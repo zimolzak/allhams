@@ -45,4 +45,9 @@ print("""
 Number means it's from my_dxcc.csv on disk.
 Basically look for any lines with two **.
 But it gets messed up because alphabetical order and abbreviations.
+
+Then edit or run:
+- my_dxcc.csv
+- recent.txt
+- make
 """)
