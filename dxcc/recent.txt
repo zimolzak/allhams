@@ -13,3 +13,9 @@
 76 suriname
 77 uruguay 2023-12-02
 78 honduras 2023-11-25 08:30:00, qsl 2023-12-03 14:42:18
+79 bahama
+80 bosnia
+81 latvia
+82 scotland
+83 wales
+84 slovak
