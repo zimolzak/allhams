@@ -19,3 +19,5 @@
 82 scotland
 83 wales
 84 slovak
+85 greece
+86 sweden
