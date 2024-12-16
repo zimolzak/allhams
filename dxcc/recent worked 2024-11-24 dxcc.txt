@@ -1,6 +1,7 @@
 aland
-estonia
+estonia   - 91
 iceland
-luxemb
+luxemb    - 92
 galapagos
-corsica
+corsica   - 90
+mauritius - 93
